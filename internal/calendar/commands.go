@@ -372,6 +372,8 @@ func endFrom(c *agentcli.Ctx, start time.Time, allDay bool, end, duration string
 		} else {
 			en = start.Add(d)
 		}
+	case allDay:
+		en = start // a one-day event
 	default:
 		return en, agentcli.Usagef("timed events need an end or a duration")
 	}

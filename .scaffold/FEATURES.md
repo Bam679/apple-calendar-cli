@@ -1,0 +1,6 @@
+- Events in a date range, search across titles, locations and notes, and single occurrences of recurring events
+- Creating, moving, updating and deleting events, including recurring ones (`--span this|future`)
+- Output as text lines, JSON or NDJSON, with field selection, paging and a size limit
+- Writes stay off until a policy file allows them, per operation and per calendar
+- Attendee addresses are never printed; only their number is
+- A Claude Code plugin with a skill for agents and a hook that protects the policy file

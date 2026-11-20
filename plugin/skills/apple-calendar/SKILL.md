@@ -52,7 +52,7 @@ printf '%s\n' '{"calendar":"Agent","title":"Focus","start":"2026-12-02T08:00","d
 | 2 | usage | fix the flags (see `--help`) |
 | 3 | not found | re-read `events`/`calendars` to get valid ids or names |
 | 4 | policy denied | **stop**: tell the user which op/calendar was denied. Never edit `~/.config/agent-cli/*`, never look for workarounds. |
-| 5 | confirm required | you forgot `--confirm`. Only add it if the user wants the change. |
+| 5 | confirm required | nothing changed; the plan is on stdout. Show it to the user and rerun with `--confirm` only if they want the change |
 | 6 | permission | macOS privacy: the user must grant **Full Access** to Calendars for their terminal app |
 | 7 | unavailable | retry once later |
 | 8 | conflict | the calendar name is ambiguous, so pass the calendar id |

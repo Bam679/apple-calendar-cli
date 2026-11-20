@@ -1,3 +1,3 @@
-## macOS privacy (TCC)
+## macOS privacy permission
 
-`apple-calendar` uses EventKit through `/usr/bin/osascript`. macOS attributes the access to the **app that runs the CLI** (Terminal, iTerm, VS Code, Claude desktop …). On first use, macOS asks for **Calendars** access. If you denied it, enable your terminal app under **System Settings > Privacy & Security > Calendars** and choose **Full Access** (write-only access is not enough for reads). `apple-calendar doctor` reports the status, and errors use exit code 6 with a hint.
+`apple-calendar` reaches Calendar through EventKit, which it runs via `/usr/bin/osascript`. macOS gives the permission to the app that runs the CLI: Terminal, iTerm, VS Code or Claude. On first use macOS asks for Calendars access. If you declined, open System Settings > Privacy & Security > Calendars and choose Full Access for your terminal app; write-only access is not enough for reading. `apple-calendar doctor` shows whether access works; without it, commands exit with code 6.

@@ -521,3 +521,13 @@ func TestSchemaListsWriteOps(t *testing.T) {
 		t.Fatal("calendar deletion must not be a CLI command")
 	}
 }
+
+func TestAllDayWithoutEndIsOneDay(t *testing.T) {
+	code, out, errOut := run(t, newFake(), sandboxRW, "", "add", "--calendar", "Agent Sandbox", "--title", "Coffee", "--start", "2026-12-01", "--all-day", "--dry-run", "--json")
+	if code != 0 || !strings.Contains(out, `"start":"2026-12-01"`) || !strings.Contains(out, `"end":"2026-12-01"`) {
+		t.Fatalf("all-day without end: %d %s %s", code, out, errOut)
+	}
+	if code, _, _ := run(t, newFake(), sandboxRW, "", "add", "--calendar", "Agent Sandbox", "--title", "x", "--start", "2026-12-01T10:00", "--dry-run"); code != agentcli.ExitUsage {
+		t.Fatalf("timed event without end must be a usage error: %d", code)
+	}
+}

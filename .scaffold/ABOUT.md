@@ -1,0 +1,1 @@
+`apple-calendar` lets an AI agent check your schedule and put events into it. It reads and writes calendars through EventKit, prints one compact line per event, and stays read-only until you allow writes in a policy file. The checks run inside the binary, so they apply to every agent, whether that is Claude Code, Codex, Cursor or a script.
