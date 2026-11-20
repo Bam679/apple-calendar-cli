@@ -1,0 +1,1 @@
+`apple-calendar` runs one fixed JXA script through `/usr/bin/osascript`. The script talks to EventKit and receives your input as a single JSON argument, so text from you or the agent never becomes code. Event identifiers combine the series identifier with the occurrence date, so an agent can address one occurrence of a recurring meeting.

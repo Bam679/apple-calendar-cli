@@ -1,0 +1,3 @@
+- You need to send invitations or answer them. EventKit can't, and the CLI doesn't try.
+- You need to delete calendars. The CLI only creates them; delete them in the Calendar app.
+- Your agent cannot run shell commands. An MCP server fits better there.

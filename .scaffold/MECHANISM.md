@@ -1,0 +1,1 @@
+`apple-calendar` reads and writes events through EventKit, the macOS framework behind the Calendar app, and prints one line per event or JSON. Everything runs on your Mac, and the CLI itself makes no network connections. Writes stay off until a policy file allows them, and attendee addresses are never printed.
