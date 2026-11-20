@@ -1,10 +1,20 @@
 {
   "name": "apple-calendar",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Apple Calendar CLI for AI agents: list, search and (policy-gated) create/update events via EventKit.",
-  "author": { "name": "Bam679", "url": "https://github.com/Bam679" },
+  "author": {
+    "name": "Bam679",
+    "url": "https://github.com/Bam679"
+  },
   "homepage": "https://github.com/Bam679/apple-calendar-cli",
   "repository": "https://github.com/Bam679/apple-calendar-cli",
   "license": "MIT",
-  "keywords": ["apple-calendar", "calendar", "eventkit", "macos", "cli", "agent"]
+  "keywords": [
+    "apple-calendar",
+    "calendar",
+    "eventkit",
+    "macos",
+    "cli",
+    "agent"
+  ]
 }
