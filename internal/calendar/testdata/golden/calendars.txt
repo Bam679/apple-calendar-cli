@@ -1,0 +1,4 @@
+C2	Agent Sandbox	iCloud
+C4	Dup	iCloud
+C5	Dup	Local
+C1	Work	iCloud

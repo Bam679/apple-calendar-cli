@@ -1,0 +1,13 @@
+{
+  "name": "apple-calendar-cli",
+  "owner": { "name": "Bam679" },
+  "description": "Single-plugin marketplace for apple-calendar. All agent CLIs: Bam679/agent-cli-plugins.",
+  "plugins": [
+    {
+      "name": "apple-calendar",
+      "source": "./plugin",
+      "description": "Apple Calendar CLI for AI agents: list, search and (policy-gated) create/update events via EventKit.",
+      "category": "productivity"
+    }
+  ]
+}

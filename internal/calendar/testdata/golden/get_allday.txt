@@ -1,0 +1,14 @@
+id: E2@1795219200000
+title: Planning day
+calendar: Agent Sandbox
+calendar_id: C2
+start: 2026-11-21
+end: 2026-11-21
+all_day: true
+location: -
+notes: bring notes
+url: https://example.com/plan
+recurring: false
+status: confirmed
+organizer: -
+attendees: 0

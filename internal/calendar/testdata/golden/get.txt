@@ -1,0 +1,14 @@
+id: E1@1795168800000
+title: Team sync
+calendar: Work
+calendar_id: C1
+start: 2026-11-20T10:00:00Z
+end: 2026-11-20T10:30:00Z
+all_day: false
+location: Room 1
+notes: -
+url: -
+recurring: false
+status: confirmed
+organizer: Alex Example
+attendees: 3

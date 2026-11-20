@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash|Edit|Write|MultiEdit|NotebookEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "command -v apple-calendar >/dev/null 2>&1 || exit 0; exec apple-calendar guard",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}

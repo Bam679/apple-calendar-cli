@@ -1,0 +1,19 @@
+{
+  "REPO": "apple-calendar-cli",
+  "BIN": "apple-calendar",
+  "TITLE": "Apple Calendar",
+  "DESC": "Apple Calendar CLI for AI agents: list, search and (policy-gated) create/update events via EventKit.",
+  "PKG": "calendar",
+  "APPLE": true,
+  "GOOS": "darwin",
+  "PLATFORMS": "macOS 14+, Apple Silicon and Intel",
+  "EXAMPLE_OS": "darwin",
+  "KEYWORDS": "\"apple-calendar\", \"calendar\", \"eventkit\", \"macos\", \"cli\", \"agent\"",
+  "SCOPE_HELP": "calendar titles (e.g. `Work`, `Agent*`)",
+  "WRITE_OPS": "`add`, `update`, `delete`, `calendar-create`",
+  "SYSTEM_POLICY": "/Library/Application Support/agent-cli/apple-calendar.json",
+  "INJECTION": "Static JXA script (`go:embed`). Input travels only as one JSON argv element to `/usr/bin/osascript` (absolute path), and fuzz tests check the script is never altered by input. Search text reaches EventKit only as an `NSPredicate` argument, never as format text. An integration test round-trips hostile strings through real osascript.",
+  "SECRETS": "No credentials involved; macOS TCC controls access.",
+  "NETWORK": "",
+  "POLICY": "{\n  \"version\": 1,\n  \"operations\": { \"allow\": [\"read\", \"add\", \"update\"], \"deny\": [\"delete\", \"calendar-create\"] },\n  \"scopes\": {\n    \"read\":  { \"allow\": [\"*\"], \"deny\": [\"Private*\"] },\n    \"write\": { \"allow\": [\"Agent*\"], \"deny\": [] }\n  },\n  \"limits\": { \"max_results\": 200, \"max_write_batch\": 10 }\n}"
+}
