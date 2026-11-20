@@ -7,6 +7,11 @@ Read and manage Apple Calendar events from the command line, built for AI coding
 [![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/Bam679/apple-calendar-cli/badge)](https://scorecard.dev/viewer/?uri=github.com/Bam679/apple-calendar-cli)
 [![licence](https://img.shields.io/badge/licence-MIT-blue.svg)](LICENSE)
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/logo-dark.svg">
+  <img alt="apple-calendar logo: the agent-cli bracket mark with the apple-calendar glyph" src="assets/logo.svg" height="56">
+</picture>
+
 `apple-calendar` reads and writes events through EventKit, the macOS framework behind the Calendar app, and prints one line per event or JSON. Everything runs on your Mac, and the CLI itself makes no network connections. Writes stay off until a policy file allows them, and attendee addresses are never printed.
 
 
